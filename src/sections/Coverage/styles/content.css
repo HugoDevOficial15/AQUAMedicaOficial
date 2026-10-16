@@ -1,0 +1,185 @@
+/* =========================================================
+   COVERAGE - CONTENT
+========================================================= */
+
+.coverage-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.coverage-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: max-content;
+
+    padding: 10px 22px;
+
+    margin-bottom: 28px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(0, 180, 255, .20);
+
+    background: rgba(255, 255, 255, .70);
+
+    backdrop-filter: blur(12px);
+
+    color: #119DFF;
+
+    font-size: .82rem;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+}
+
+.coverage-title {
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    color: #081B39;
+
+    margin-bottom: 28px;
+
+}
+
+.coverage-title span {
+
+    background: linear-gradient(135deg,
+            #00CFE8,
+            #119DFF);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+.coverage-line {
+
+    width: 90px;
+
+    height: 5px;
+
+    border-radius: 999px;
+
+    margin-bottom: 30px;
+
+    background: linear-gradient(90deg,
+            #00CFE8,
+            #119DFF);
+
+}
+
+.coverage-description {
+
+    max-width: 620px;
+
+    font-size: 1.18rem;
+
+    line-height: 2;
+
+    color: #5C6D84;
+
+    margin-bottom: 40px;
+
+}
+
+.coverage-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.coverage-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    color: #34445B;
+
+    font-size: 1.05rem;
+
+    font-weight: 500;
+
+}
+
+.coverage-item svg {
+
+    color: #00B7FF;
+
+    font-size: 1.2rem;
+
+}
+
+@media(max-width:992px) {
+
+    .coverage-content {
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+    .coverage-tag {
+
+        margin-inline: auto;
+
+    }
+
+    .coverage-line {
+
+        margin-inline: auto;
+
+    }
+
+    .coverage-list {
+
+        align-items: flex-start;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .coverage-title {
+
+        font-size: 2.7rem;
+
+    }
+
+    .coverage-description {
+
+        font-size: 1.05rem;
+
+        line-height: 1.9;
+
+    }
+
+}

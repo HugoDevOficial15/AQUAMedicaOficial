@@ -1,0 +1,521 @@
+/*==================================================
+DIVIDER
+==================================================*/
+
+.footer-divider {
+
+    position: absolute;
+
+    top: -118px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 120px;
+
+    overflow: hidden;
+
+    line-height: 0;
+
+}
+
+.footer-divider svg {
+
+    display: block;
+
+    width: 100%;
+
+    height: 120px;
+
+}
+
+
+/*==================================================
+FOOTER V2
+==================================================*/
+
+.footer {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 170px 0 40px;
+
+    background:
+        linear-gradient(180deg,
+            #051321 0%,
+            #081B39 55%,
+            #04101C 100%);
+
+}
+
+/*==================================================
+BACKGROUND
+==================================================*/
+
+/* .footer-wave {
+
+    position: absolute;
+
+    top: -120px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 220px;
+
+    background:
+        radial-gradient(circle at 50% 100%,
+            rgba(0, 207, 232, .18),
+            transparent 70%);
+
+    filter: blur(40px);
+
+} */
+
+.footer-glow {
+
+    position: absolute;
+
+    top: -250px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 1200px;
+
+    height: 500px;
+
+    background:
+        radial-gradient(rgba(0, 207, 232, .18),
+            transparent 70%);
+
+    filter: blur(80px);
+
+}
+
+.footer-grid-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .025) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .025) 1px,
+            transparent 1px);
+
+    background-size: 42px 42px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+
+}
+
+/*==================================================
+CONTAINER
+==================================================*/
+
+.footer-container {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1450px, 92%);
+
+    margin: auto;
+
+}
+
+/*==================================================
+TOP
+==================================================*/
+
+.footer-top {
+
+    display: grid;
+
+    grid-template-columns: 2.5fr 1fr 1.2fr 1.4fr;
+
+    gap: 70px;
+
+    margin-bottom: 80px;
+
+}
+
+/*==================================================
+LOGO
+==================================================*/
+
+.footer-brand img {
+
+    width: 290px;
+
+    margin-bottom: 28px;
+
+    filter:
+
+        drop-shadow(0 25px 45px rgba(0, 207, 232, .20));
+
+}
+
+.footer-brand h2 {
+
+    color: white;
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
+}
+
+.footer-brand p {
+
+    max-width: 420px;
+
+    color: rgba(255, 255, 255, .72);
+
+    line-height: 2;
+
+}
+
+/*==================================================
+LINKS
+==================================================*/
+
+.footer-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.footer-links h3,
+
+.footer-contact h3 {
+
+    color: #FFFFFF;
+
+    font-size: 1.25rem;
+
+    margin-bottom: 26px;
+
+    position: relative;
+
+}
+
+.footer-links h3::after,
+
+.footer-contact h3::after {
+
+    content: "";
+
+    display: block;
+
+    width: 55px;
+
+    height: 3px;
+
+    margin-top: 12px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(90deg,
+            #00CFE8,
+            #119DFF);
+
+}
+
+.footer-links a,
+
+.footer-links span {
+
+    color: rgba(255, 255, 255, .72);
+
+    text-decoration: none;
+
+    padding: 10px 0;
+
+    transition: .30s;
+
+}
+
+.footer-links a:hover {
+
+    color: #FFFFFF;
+
+    padding-left: 12px;
+
+}
+
+/*==================================================
+CONTACT
+==================================================*/
+
+.footer-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+.footer-contact p {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    color: rgba(255, 255, 255, .72);
+
+    line-height: 1.8;
+
+}
+
+.footer-contact svg {
+
+    width: 20px;
+
+    color: #00CFE8;
+
+    margin-top: 5px;
+
+    flex-shrink: 0;
+
+}
+
+/*==================================================
+SOCIAL
+==================================================*/
+
+.footer-social {
+
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 35px;
+
+}
+
+.footer-social a {
+
+    width: 56px;
+
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, .06);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    transition: .35s;
+
+}
+
+.footer-social a:hover {
+
+    transform: translateY(-8px);
+
+    background:
+
+        linear-gradient(135deg,
+            #00CFE8,
+            #119DFF);
+
+    box-shadow:
+
+        0 20px 45px rgba(0, 207, 232, .28);
+
+}
+
+/*==================================================
+BOTTOM
+==================================================*/
+
+.footer-bottom {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 40px;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.footer-bottom p {
+
+    color: rgba(255, 255, 255, .55);
+
+    letter-spacing: .04em;
+
+}
+
+.footer-top-button {
+
+    width: 64px;
+
+    height: 64px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.2rem;
+
+    color: #FFF;
+
+    background:
+
+        linear-gradient(135deg,
+            #00CFE8,
+            #119DFF);
+
+    box-shadow:
+        0 20px 50px rgba(0, 207, 232, .28);
+
+    transition: .35s;
+
+}
+
+.footer-top-button:hover {
+
+    transform:
+
+        translateY(-8px) rotate(360deg);
+
+}
+
+/*==================================================
+HOVER LINE
+==================================================*/
+
+.footer::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -30%;
+
+    width: 160%;
+
+    height: 2px;
+
+    background:
+
+        linear-gradient(90deg,
+            transparent,
+            #00CFE8,
+            #119DFF,
+            transparent);
+
+    opacity: .55;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px) {
+
+    .footer-top {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 50px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .footer {
+
+        padding: 90px 0 35px;
+
+    }
+
+    .footer-top {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .footer-brand {
+
+        text-align: center;
+
+    }
+
+    .footer-brand p {
+
+        margin: auto;
+
+    }
+
+    .footer-social {
+
+        justify-content: center;
+
+    }
+
+    .footer-bottom {
+
+        flex-direction: column-reverse;
+
+        gap: 25px;
+
+    }
+
+}

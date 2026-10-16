@@ -1,0 +1,589 @@
+.hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding-top: 120px;
+
+    background:
+
+        radial-gradient(circle at 80% 30%,
+            rgba(0, 190, 255, .22),
+            transparent 25%),
+
+        radial-gradient(circle at 75% 40%,
+            rgba(0, 255, 255, .08),
+            transparent 35%),
+
+        linear-gradient(135deg,
+            #00132e 0%,
+            #003c72 55%,
+            #005d8c 100%);
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    right: -350px;
+
+    top: -180px;
+
+    width: 1300px;
+
+    height: 1300px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(0, 190, 255, .08);
+
+    z-index: 0;
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -150px;
+
+    top: -20px;
+
+    width: 900px;
+
+    height: 900px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(0, 190, 255, .08);
+
+    z-index: 0;
+}
+
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at 70% 40%,
+            rgba(0, 183, 255, .18),
+            transparent 35%);
+
+    pointer-events: none;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 48% 52%;
+    align-items: center;
+
+    min-height: 500px;
+
+    max-width: 1500px;
+    margin: 0 auto;
+
+    gap: 2rem;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+.hero-badge {
+    display: inline-flex;
+
+    padding: 1rem 1.8rem;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(20px);
+
+    color: white;
+
+    font-weight: 600;
+
+    margin-bottom: 2rem;
+}
+
+.hero-family {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+
+    margin-bottom: 1rem;
+}
+
+.hero-family span {
+    color: #00d4c4;
+}
+
+.hero-title {
+    color: white;
+
+    font-size: clamp(4rem, 4.5vw, 5.6rem);
+
+    line-height: 1.02;
+
+    font-weight: 800;
+
+    margin-bottom: 2rem;
+
+    max-width: 700px;
+}
+
+.hero-description {
+    color: rgba(255, 255, 255, .88);
+
+    font-size: 1.35rem;
+
+    line-height: 1.7;
+
+    max-width: 650px;
+
+    margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hero-btn-primary {
+    border: none;
+
+    background: white;
+
+    color: #003f73;
+
+    padding: 1.2rem 2.5rem;
+
+    border-radius: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.hero-btn-secondary {
+    border: 1px solid rgba(255, 255, 255, .4);
+
+    background: transparent;
+
+    color: white;
+
+    padding: 1.2rem 2.5rem;
+
+    border-radius: 18px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+/* =========================
+   PRODUCT
+========================= */
+
+.hero-product {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 900px;
+}
+
+.hero-product-glow {
+
+    position: absolute;
+
+    width: 1200px;
+
+    height: 1200px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(rgba(0, 190, 255, .28),
+            transparent 70%);
+
+    filter: blur(140px);
+
+    z-index: 0;
+}
+
+.hero-circle {
+
+    position: absolute;
+
+    width: 1200px;
+
+    height: 1200px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid rgba(0, 190, 255, .18);
+
+    box-shadow:
+        inset 0 0 100px rgba(0, 190, 255, .05);
+
+    z-index: 1;
+}
+
+
+.hero-circle::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 100px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(0, 190, 255, .10);
+}
+
+/* =========================
+   PODIO
+========================= */
+.hero-platform {
+    position: absolute;
+
+    bottom: 30px;
+
+    width: 760px;
+    height: 220px;
+
+    z-index: 2;
+}
+
+/* GLOW INFERIOR */
+
+.hero-platform-glow {
+    position: absolute;
+
+    bottom: -35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 85%;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(ellipse,
+            rgba(0, 180, 255, .55),
+            transparent 75%);
+
+    filter: blur(30px);
+}
+
+/* TAPA SUPERIOR */
+
+.hero-platform-top {
+    position: absolute;
+
+    top: 0;
+
+    width: 100%;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(ellipse at center,
+            #66d8ff 0%,
+            #1d9eff 35%,
+            #0058b6 75%,
+            #003a7d 100%);
+
+    box-shadow:
+        inset 0 10px 20px rgba(255, 255, 255, .25),
+        inset 0 -20px 40px rgba(0, 0, 0, .35),
+        0 0 40px rgba(0, 162, 255, .45);
+}
+
+.hero-platform-top::before {
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 80%;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, .7),
+            transparent);
+
+    filter: blur(6px);
+}
+
+/* CUERPO */
+
+.hero-platform-side {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+    height: 140px;
+
+    border-radius: 0 0 120px 120px;
+
+    background:
+        linear-gradient(180deg,
+            #0056b0 0%,
+            #00397a 30%,
+            #002450 65%,
+            #000f24 100%);
+
+    box-shadow:
+        inset 0 20px 30px rgba(255, 255, 255, .05),
+        inset 0 -25px 35px rgba(0, 0, 0, .45),
+        0 35px 50px rgba(0, 0, 0, .35);
+}
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.hero-product-image {
+    position: relative;
+
+    z-index: 5;
+
+    width: 32rem;
+
+    max-width: none;
+
+    object-fit: contain;
+
+    transform: translateY(-20px);
+
+    filter:
+        drop-shadow(0 60px 80px rgba(0, 0, 0, .30));
+
+    animation:
+        float 6s ease-in-out infinite;
+}
+
+/* =========================
+   PRODUCT BADGE
+========================= */
+/* ancla */
+.hero-product-badge {
+    position: absolute;
+
+    top:0px;
+    right: 100px;
+
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+
+    /* gap: 18px; */
+
+    padding: 14px 20px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(0, 45, 95, .22);
+
+    backdrop-filter: blur(20px);
+
+    border:
+        1px solid rgba(0, 220, 255, .35);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .15);
+
+    color: white;
+}
+
+.hero-product-badge-icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        2px solid rgba(0, 220, 255, .45);
+
+    color: #48e8ff;
+
+    font-size: 1.4rem;
+
+    background:
+        rgba(0, 220, 255, .05);
+}
+
+.hero-product-badge small {
+    display: block;
+
+    font-size: .85rem;
+
+    letter-spacing: .08em;
+
+    font-weight: 500;
+
+    opacity: .85;
+}
+
+.hero-product-badge strong {
+    display: block;
+
+    font-size: 2rem;
+
+    line-height: .95;
+
+    font-weight: 800;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.hero-stats {
+    position: relative;
+
+    background: white;
+
+    margin-top: -5px;
+    /* 
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px; */
+
+    padding: 5rem 4rem;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+}
+
+.hero-stat {
+    text-align: center;
+
+    padding: 0 2rem;
+
+
+}
+
+.hero-stat:not(:last-child) {
+    border-right:
+        1px solid #e5e7eb;
+}
+
+.hero-stat-icon {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    margin: 0 auto 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #cbd5e1;
+
+    color: #0b5f91;
+
+    font-size: 1.5rem;
+}
+
+.hero-stat h3 {
+    font-size: 4rem;
+
+    color: #0b5f91;
+}
+
+.hero-stat h4 {
+    margin-top: .5rem;
+
+    font-size: 1.2rem;
+}
+
+.hero-stat p {
+    margin-top: .8rem;
+
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes float {
+    0% {
+        transform: translateY(30px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+.hero-wave {
+
+    position: relative;
+    margin-top: -40px;
+    z-index: 20;
+}
+
+.hero-wave svg {
+
+    width: 100%;
+    height: 220px;
+    display: block;
+}

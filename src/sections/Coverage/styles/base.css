@@ -1,0 +1,182 @@
+/* =========================================================
+   COVERAGE - BASE
+========================================================= */
+
+.coverage {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 32px 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at top right,
+            rgba(0, 162, 255, .10),
+            transparent 45%),
+        #F8FCFF;
+
+}
+
+.coverage::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        radial-gradient(rgba(0, 119, 255, .08) 1px, transparent 1px);
+
+    background-size: 28px 28px;
+
+    opacity: .45;
+
+    pointer-events: none;
+
+}
+
+.coverage-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1500px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+}
+
+.coverage-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    margin-bottom: 90px;
+
+}
+
+.coverage-divider {
+
+    width: 120px;
+
+    height: 5px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(90deg,
+            #00CFE8,
+            #119DFF);
+
+}
+
+.coverage-section-title {
+
+    color: #071B45;
+
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    margin-bottom: 28px;
+
+}
+
+.coverage-section-title span {
+
+    color: #129BFF;
+
+}
+
+.coverage-section-text {
+
+    font-size: 1.18rem;
+
+    line-height: 2;
+
+    color: #566983;
+
+    max-width: 640px;
+
+}
+
+@media (max-width:1200px) {
+
+    .coverage-grid {
+
+        gap: 50px;
+
+    }
+
+}
+
+@media (max-width:992px) {
+
+    .coverage {
+
+        padding: 90px 0;
+
+    }
+
+    .coverage-container {
+
+        width: min(100%, calc(100% - 40px));
+
+    }
+
+    .coverage-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .coverage {
+
+        padding: 70px 0;
+
+    }
+
+    .coverage-grid {
+
+        gap: 40px;
+
+    }
+
+    .coverage-section-title {
+
+        text-align: center;
+
+    }
+
+    .coverage-section-text {
+
+        text-align: center;
+
+        margin: auto;
+
+    }
+
+    .coverage-divider {
+
+        margin: auto;
+
+    }
+
+}

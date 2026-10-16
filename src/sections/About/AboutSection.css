@@ -1,0 +1,331 @@
+/*=========================================================
+ABOUT
+=========================================================*/
+
+.about {
+
+    position: relative;
+
+    padding: 32px 0;
+
+    background:
+
+        linear-gradient(180deg,
+            #ffffff 0%,
+            #f7fbff 100%);
+
+    overflow: hidden;
+
+}
+
+.about::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(rgba(0, 180, 255, .08) 1px,
+            transparent 1px);
+
+    background-size: 28px 28px;
+
+    opacity: .45;
+
+    pointer-events: none;
+
+}
+
+.about-container {
+
+    width: min(1450px, 92%);
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/*=========================================================
+GRID
+=========================================================*/
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    margin-bottom: 80px;
+
+}
+
+/*=========================================================
+CONTENT
+=========================================================*/
+
+.about-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 10px 24px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(0, 170, 255, .18);
+
+    color: #009dff;
+
+    font-size: .82rem;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+    margin-bottom: 28px;
+
+}
+
+.about-title {
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    line-height: 1.05;
+
+    color: #081B39;
+
+    margin-bottom: 25px;
+
+}
+
+.about-title span {
+
+    color: #009dff;
+
+}
+
+.about-line {
+
+    width: 90px;
+
+    height: 5px;
+
+    border-radius: 999px;
+
+    background:
+
+        linear-gradient(90deg,
+            #00d4c4,
+            #009dff);
+
+    margin-bottom: 30px;
+
+}
+
+.about-description {
+
+    font-size: 1.15rem;
+
+    line-height: 2;
+
+    color: #64748B;
+
+    margin-bottom: 35px;
+
+}
+
+/*=========================================================
+LISTA
+=========================================================*/
+
+.about-highlights {
+
+    display: grid;
+
+    gap: 18px;
+
+    margin-bottom: 40px;
+
+}
+
+.about-item {
+
+    color: #34445B;
+
+    font-weight: 600;
+
+}
+
+/*=========================================================
+BOTON
+=========================================================*/
+
+.about-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px 34px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background:
+
+        linear-gradient(135deg,
+            #00d4c4,
+            #009dff);
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+}
+
+.about-button:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+/*=========================================================
+STATS
+=========================================================*/
+
+.about-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+.about-stat {
+
+    background: white;
+
+    border-radius: 28px;
+
+    padding: 38px;
+
+    text-align: center;
+
+    border: 1px solid rgba(0, 170, 255, .08);
+
+    transition: .35s;
+
+    box-shadow:
+
+        0 20px 45px rgba(0, 0, 0, .05);
+
+}
+
+.about-stat:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.about-stat-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: auto auto 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #eef8ff;
+
+    color: #009dff;
+
+    font-size: 1.8rem;
+
+}
+
+.about-stat h3 {
+
+    font-size: 3rem;
+
+    color: #081B39;
+
+    margin-bottom: 10px;
+
+}
+
+.about-stat p {
+
+    color: #64748B;
+
+}
+
+/*=========================================================
+RESPONSIVE
+=========================================================*/
+
+@media(max-width:1100px) {
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .about-stats {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .about {
+
+        padding: 90px 0;
+
+    }
+
+    .about-image {
+
+        height: 420px;
+
+    }
+
+    .about-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

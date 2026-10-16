@@ -1,0 +1,639 @@
+/*=========================================================
+ABOUT GALLERY
+=========================================================*/
+
+.about-gallery {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    width: 100%;
+
+}
+
+/*=========================================================
+SLIDER
+=========================================================*/
+
+.gallery-main {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 620px;
+
+    overflow: hidden;
+
+    border-radius: 34px;
+
+    background: #EEF8FF;
+
+    box-shadow:
+
+        0 40px 90px rgba(0, 70, 140, .10);
+
+}
+
+.gallery-main-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+
+}
+
+.gallery-main:hover .gallery-main-image {
+
+    transform: scale(1.03);
+
+}
+
+/*=========================================================
+OVERLAY
+=========================================================*/
+
+.gallery-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(to top,
+
+            rgba(0, 0, 0, .45),
+
+            rgba(0, 0, 0, 0));
+
+}
+
+/*=========================================================
+FLECHAS
+=========================================================*/
+
+.gallery-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 56px;
+
+    height: 56px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 1.1rem;
+
+    backdrop-filter: blur(12px);
+
+    background: rgba(255, 255, 255, .18);
+
+    transition: .35s;
+
+    z-index: 5;
+
+}
+
+.gallery-arrow:hover {
+
+    background: #009DFF;
+
+}
+
+.gallery-arrow-left {
+
+    left: 25px;
+
+}
+
+.gallery-arrow-right {
+
+    right: 25px;
+
+}
+
+/*=========================================================
+CONTADOR
+=========================================================*/
+
+.gallery-counter {
+
+    position: absolute;
+
+    bottom: 28px;
+
+    left: 30px;
+
+    color: white;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    z-index: 5;
+
+}
+
+.gallery-counter span {
+
+    font-size: 1rem;
+
+    opacity: .75;
+
+}
+
+/*=========================================================
+BOTONES
+=========================================================*/
+
+.gallery-actions {
+
+    position: absolute;
+
+    right: 30px;
+
+    bottom: 28px;
+
+    display: flex;
+
+    gap: 14px;
+
+    z-index: 5;
+
+}
+
+.gallery-action {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-weight: 600;
+
+    backdrop-filter: blur(18px);
+
+    background: rgba(255, 255, 255, .18);
+
+    transition: .35s;
+
+}
+
+.gallery-action:hover {
+
+    background: #009DFF;
+
+}
+
+/*=========================================================
+MINIATURAS
+=========================================================*/
+
+.gallery-thumbs {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 18px;
+
+    margin-top: 10px;
+
+}
+
+.gallery-thumb {
+
+    position: relative;
+
+    height: 105px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    border: 3px solid transparent;
+
+    transition: .35s;
+
+    background: #EEF6FC;
+
+}
+
+.gallery-thumb img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .35s;
+
+}
+
+.gallery-thumb:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.gallery-thumb.active {
+
+    border-color: #009DFF;
+
+    box-shadow:
+
+        0 0 25px rgba(0, 157, 255, .35);
+
+}
+
+/*=========================================================
+VIDEO
+=========================================================*/
+
+.gallery-thumb-video {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(135deg,
+            #009DFF,
+            #00D4C4);
+
+}
+
+.gallery-thumb-video video {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: .35;
+
+}
+
+.gallery-thumb-video-overlay {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: white;
+
+    font-size: .9rem;
+
+    font-weight: 700;
+
+}
+
+.gallery-thumb-video-overlay svg {
+
+    font-size: 1.6rem;
+
+}
+
+/*=========================================================
+LIGHTBOX
+=========================================================*/
+
+.gallery-lightbox,
+
+.gallery-video-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0, 0, 0, .85);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 9999;
+
+    animation: fadeIn .25s;
+
+}
+
+.gallery-lightbox-image {
+
+    max-width: 88vw;
+
+    max-height: 88vh;
+
+    border-radius: 22px;
+
+    box-shadow:
+
+        0 40px 100px rgba(0, 0, 0, .35);
+
+}
+
+.gallery-lightbox-close,
+
+.gallery-video-close {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    width: 54px;
+
+    height: 54px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    color: white;
+
+    background: rgba(255, 255, 255, .15);
+
+    font-size: 1.2rem;
+
+}
+
+/*=========================================================
+VIDEO MODAL
+=========================================================*/
+
+.gallery-video-container {
+
+    width: min(1100px, 92vw);
+
+}
+
+.gallery-video-player {
+
+    width: 100%;
+
+    border-radius: 22px;
+
+}
+
+/*=========================================================
+RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px) {
+
+    .gallery-main {
+
+        height: 480px;
+
+    }
+
+    .gallery-thumbs {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .gallery-main {
+
+        height: 340px;
+
+    }
+
+    .gallery-arrow {
+
+        width: 46px;
+
+        height: 46px;
+
+    }
+
+    .gallery-counter {
+
+        font-size: 1.3rem;
+
+    }
+
+    .gallery-actions {
+
+        left: 20px;
+
+        right: 20px;
+
+        bottom: 20px;
+
+        justify-content: space-between;
+
+    }
+
+    .gallery-action {
+
+        padding: 12px 18px;
+
+        font-size: .85rem;
+
+    }
+
+    .gallery-thumbs {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+/*=========================================================
+ANIMACIONES
+=========================================================*/
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+/*==========================
+VIDEO THUMB
+==========================*/
+
+/* .video-thumb {
+
+    position: relative;
+
+    overflow: hidden;
+
+} */
+
+
+.video-thumb {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 125px;
+
+    border: 3px solid rgba(0, 170, 255, .18);
+
+    transition: .35s;
+
+    cursor: pointer;
+
+}
+
+.video-thumb:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #00AAFF;
+
+    box-shadow: 0 18px 45px rgba(0, 170, 255, .25);
+
+}
+
+.video-thumb::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .35);
+
+}
+
+.video-thumb-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: linear-gradient(rgba(0, 0, 0, .20),
+            rgba(0, 0, 0, .55));
+
+    z-index: 2;
+
+}
+
+.video-thumb-overlay svg {
+
+    width: 64px;
+
+    height: 64px;
+
+    padding: 18px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #009DFF;
+
+    transition: .30s;
+
+}
+
+.video-thumb:hover svg {
+
+    transform: scale(1.15);
+
+}
+
+.video-thumb-overlay span {
+
+    color: white;
+
+    font-size: .9rem;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+}

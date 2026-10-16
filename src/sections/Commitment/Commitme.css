@@ -1,0 +1,1003 @@
+/*==================================================
+COMMITMENT
+==================================================*/
+
+.commitment {
+
+    position: relative;
+
+    padding: 32px 0;
+
+    background:
+        linear-gradient(180deg,
+            #F8FCFF 0%,
+            #FFFFFF 100%);
+
+}
+
+.commitment-container {
+
+    width: min(1400px, 92%);
+
+    margin: auto;
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.commitment-header {
+
+    max-width: 760px;
+
+    margin: 0 auto 80px;
+
+    text-align: center;
+
+}
+
+.commitment-header h2 {
+
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    color: #081B39;
+
+    margin: 24px 0;
+
+}
+
+.commitment-header h2 span {
+
+    color: #119DFF;
+
+}
+
+.commitment-header p {
+
+    font-size: 1.12rem;
+
+    line-height: 1.9;
+
+    color: #64748B;
+
+}
+
+/*==================================================
+GRID
+==================================================*/
+
+.commitment-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 34px;
+
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.commitment-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 50px 42px;
+
+    border-radius: 34px;
+
+    background: #fff;
+
+    border: 1px solid rgba(17, 157, 255, .08);
+
+    box-shadow:
+
+        0 25px 60px rgba(10, 40, 90, .05);
+
+    transition: .40s;
+
+}
+
+.commitment-card:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow:
+
+        0 35px 90px rgba(17, 157, 255, .12);
+
+}
+
+.commitment-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 6px;
+
+    background: linear-gradient(90deg,
+            #00CFE8,
+            #119DFF);
+
+}
+
+/*==================================================
+ICON
+==================================================*/
+
+.commitment-icon {
+
+    width: 82px;
+
+    height: 82px;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+    font-size: 2rem;
+
+    color: white;
+
+    background: linear-gradient(135deg,
+            #00CFE8,
+            #119DFF);
+
+    box-shadow:
+
+        0 20px 40px rgba(17, 157, 255, .25);
+
+}
+
+.commitment-card h3 {
+
+    font-size: 2rem;
+
+    color: #081B39;
+
+    margin-bottom: 18px;
+
+}
+
+.commitment-card p {
+
+    color: #64748B;
+
+    line-height: 1.9;
+
+    margin-bottom: 36px;
+
+}
+
+/*==================================================
+BUTTON
+==================================================*/
+
+.commitment-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: none;
+
+    cursor: pointer;
+
+    padding: 15px 24px;
+
+    border-radius: 999px;
+
+    background: #EEF8FF;
+
+    color: #119DFF;
+
+    font-weight: 700;
+
+    transition: .30s;
+
+}
+
+.commitment-button:hover {
+
+    background: #119DFF;
+
+    color: white;
+
+}
+
+/*==================================================
+VARIANTES
+==================================================*/
+
+.commitment-card.primary::before {
+
+    background: linear-gradient(90deg, #00CFE8, #119DFF);
+
+}
+
+.commitment-card.secondary::before {
+
+    background: linear-gradient(90deg, #00D084, #00CFE8);
+
+}
+
+.commitment-card.accent::before {
+
+    background: linear-gradient(90deg, #2F80ED, #119DFF);
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px) {
+
+    .commitment-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/*==================================================
+MODAL
+==================================================*/
+
+.commitment-modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px;
+
+    background: rgba(8, 27, 57, .65);
+
+    backdrop-filter: blur(14px);
+
+    z-index: 99999;
+
+    animation: fadeModal .35s ease;
+
+}
+
+.commitment-modal {
+
+    width: min(1100px, 95vw);
+
+    height: min(88vh, 900px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 34px;
+
+    background: #FFF;
+
+    position: relative;
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, .20);
+
+}
+
+
+.commitment-modal-body {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding: 60px;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+
+}
+
+.commitment-modal-body::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.commitment-modal-header {
+
+    padding: 40px;
+
+    background:
+
+        linear-gradient(135deg,
+            #081B39,
+            #119DFF);
+
+    color: white;
+
+    flex-shrink: 0;
+
+}
+
+.commitment-modal-header span {
+
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    padding: 8px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .15);
+
+    font-size: .80rem;
+
+    letter-spacing: .15em;
+
+    font-weight: 700;
+
+}
+
+.commitment-modal-header h2 {
+
+    font-size: 3rem;
+
+    margin-bottom: 18px;
+
+}
+
+.commitment-modal-header p {
+
+    font-size: 1.1rem;
+
+    opacity: .90;
+
+    max-width: 650px;
+
+}
+
+.commitment-modal-body {
+
+    padding: 60px;
+
+}
+
+.commitment-modal-close {
+
+    position: absolute;
+
+    top: 28px;
+
+    right: 28px;
+
+    width: 56px;
+
+    height: 56px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    background: rgba(255, 255, 255, .15);
+
+    transition: .30s;
+
+}
+
+.commitment-modal-close:hover {
+
+    transform: rotate(90deg);
+
+    background: white;
+
+    color: #119DFF;
+
+}
+
+/*==================================================
+MISSION
+==================================================*/
+
+.mission-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 34px;
+
+}
+
+.mission-card {
+
+    padding: 45px;
+
+    border-radius: 28px;
+
+    background: #F8FCFF;
+
+    border: 1px solid rgba(17, 157, 255, .08);
+
+    transition: .35s;
+
+}
+
+.mission-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+
+        0 25px 60px rgba(17, 157, 255, .12);
+
+}
+
+.mission-icon {
+
+    width: 82px;
+
+    height: 82px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 22px;
+
+    margin-bottom: 25px;
+
+    color: white;
+
+    font-size: 2rem;
+
+    background:
+
+        linear-gradient(135deg,
+            #00CFE8,
+            #119DFF);
+
+}
+
+.mission-label {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    color: #119DFF;
+
+}
+
+.mission-card p {
+
+    color: #64748B;
+
+    line-height: 2;
+
+    font-size: 1.05rem;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:900px) {
+
+    .mission-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .commitment-modal-header {
+
+        padding: 40px;
+
+    }
+
+    .commitment-modal-body {
+
+        flex: 1;
+
+        overflow-y: auto;
+
+        overflow-x: hidden;
+
+        padding: 60px;
+
+        scrollbar-width: none;
+
+        -ms-overflow-style: none;
+
+    }
+
+    .commitment-modal-body::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+    .commitment-modal-header h2 {
+
+        font-size: 2.2rem;
+
+    }
+
+}
+
+/*==================================================
+ANIMATION
+==================================================*/
+
+@keyframes fadeModal {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+/*==================================================
+VALUES
+==================================================*/
+
+.values-header {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+.values-header span {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 999px;
+
+    background: #EEF8FF;
+
+    color: #119DFF;
+
+    font-size: .80rem;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+    margin-bottom: 18px;
+
+}
+
+.values-header h3 {
+
+    font-size: 2.6rem;
+
+    color: #081B39;
+
+    margin-bottom: 20px;
+
+}
+
+.values-header p {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    color: #64748B;
+
+    line-height: 1.9;
+
+}
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-bottom: 80px;
+
+}
+
+.value-chip {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px 24px;
+
+    background: #F8FCFF;
+
+    border: 1px solid rgba(17, 157, 255, .08);
+
+    border-radius: 22px;
+
+    transition: .35s;
+
+}
+
+.value-chip:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+
+        0 20px 45px rgba(17, 157, 255, .12);
+
+}
+
+.value-icon {
+
+    width: 56px;
+
+    height: 56px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(135deg,
+            #00CFE8,
+            #119DFF);
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    flex-shrink: 0;
+
+}
+
+.value-chip span {
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    color: #081B39;
+
+}
+
+/*==================================================
+PRINCIPLES
+==================================================*/
+
+.principles-section {
+
+    padding-top: 70px;
+
+    border-top: 1px solid #EDF2F7;
+
+}
+
+.principles-header {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+.principles-header span {
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 999px;
+
+    background: #EEF8FF;
+
+    color: #119DFF;
+
+    font-size: .80rem;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+    margin-bottom: 18px;
+
+}
+
+.principles-header h3 {
+
+    font-size: 2.4rem;
+
+    color: #081B39;
+
+    margin-bottom: 18px;
+
+}
+
+.principles-header p {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    line-height: 1.9;
+
+    color: #64748B;
+
+}
+
+.principles-list {
+
+    display: grid;
+
+    gap: 22px;
+
+}
+
+.principle-card {
+
+    display: flex;
+
+    gap: 22px;
+
+    align-items: flex-start;
+
+    padding: 26px;
+
+    border-radius: 24px;
+
+    background: #F8FCFF;
+
+    border: 1px solid rgba(17, 157, 255, .08);
+
+    transition: .30s;
+
+}
+
+.principle-card:hover {
+
+    transform: translateX(10px);
+
+}
+
+.principle-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #119DFF;
+
+    background: #EAF7FF;
+
+    font-size: 1.2rem;
+
+    flex-shrink: 0;
+
+}
+
+.principle-card p {
+
+    color: #64748B;
+
+    line-height: 1.9;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:900px) {
+
+    .values-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/*==================================================
+POLICIES
+==================================================*/
+
+.policy-tabs {
+
+    display: flex;
+
+    gap: 18px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 45px;
+
+}
+
+.policy-tabs button {
+
+    padding: 15px 28px;
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 999px;
+
+    background: #EEF8FF;
+
+    color: #119DFF;
+
+    font-weight: 700;
+
+    font-size: .95rem;
+
+    transition: .30s;
+
+}
+
+.policy-tabs button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.policy-tabs button.active {
+
+    background: linear-gradient(135deg,
+            #00CFE8,
+            #119DFF);
+
+    color: white;
+
+    box-shadow:
+
+        0 18px 45px rgba(17, 157, 255, .25);
+
+}
+
+.policy-content {
+
+    background: #F8FCFF;
+
+    border-radius: 30px;
+
+    padding: 45px;
+
+    border: 1px solid rgba(17, 157, 255, .08);
+
+}
+
+.policy-content h3 {
+
+    font-size: 2rem;
+
+    color: #081B39;
+
+    margin-bottom: 25px;
+
+}
+
+.policy-content p {
+
+    color: #64748B;
+
+    line-height: 2;
+
+    margin-bottom: 22px;
+
+}
+
+.policy-content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+@media(max-width:768px) {
+
+    .policy-tabs {
+
+        flex-direction: column;
+
+    }
+
+    .policy-tabs button {
+
+        width: 100%;
+
+    }
+
+    .policy-content {
+
+        padding: 28px;
+
+    }
+
+}
