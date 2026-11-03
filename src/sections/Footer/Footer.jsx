@@ -80,9 +80,9 @@ export default function Footer() {
 
                         </h2>
 
-                        <p>
+                        <p style={{ textAlign: 'justify' }}>
 
-                            Fabricamos soluciones para hemodiálisis con más de
+                            Fabricamos concentrados acídos para hemodiálisis con más de
                             25 años de experiencia, innovación y compromiso con
                             la salud de miles de pacientes.
 
@@ -120,15 +120,15 @@ export default function Footer() {
 
                         </h3>
 
-                        <a href="#hero">Inicio</a>
+                        <a href="#hero-product">Inicio</a>
 
-                        <a href="#products">Productos</a>
+                        <a href="#productos">Productos</a>
 
-                        <a href="#about">Empresa</a>
+                        <a href="#about-content">Empresa</a>
 
-                        <a href="#coverage">Cobertura</a>
+                        <a href="#cobertura">Cobertura</a>
 
-                        <a href="#contact">Contacto</a>
+                        <a href="#contacto">Contacto</a>
 
                     </div>
 

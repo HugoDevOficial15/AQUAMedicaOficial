@@ -42,7 +42,7 @@ export default function HomePage() {
             <Footer />
 
             {/* Modal de mantenimiento */}
-            <MaintenanceModal />
+            {/* <MaintenanceModal /> */}
         </>
     );
 }

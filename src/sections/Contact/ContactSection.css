@@ -356,3 +356,28 @@ RESPONSIVE
     transform: translateY(-4px);
 
 }
+
+.contact-feedback {
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.contact-feedback.success {
+    color: #176b42;
+    background: #e8f7ef;
+    border: 1px solid #b8e5cb;
+}
+
+.contact-feedback.error {
+    color: #a52828;
+    background: #fff0f0;
+    border: 1px solid #f1c1c1;
+}
+
+.contact-form button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}

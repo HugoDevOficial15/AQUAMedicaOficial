@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
-import "./Header.css";
 
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+
+import "./Header.css";
 import logo from "../../assets/images/logo/logo.png";
 
-export default function Header() {
+export default function Header({ solid = false }) {
 
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
+    // Detectar desplazamiento
     useEffect(() => {
 
         const handleScroll = () => {
@@ -15,25 +19,65 @@ export default function Header() {
 
         window.addEventListener("scroll", handleScroll);
 
-        return () =>
+        handleScroll();
+
+        return () => {
             window.removeEventListener("scroll", handleScroll);
+        };
 
     }, []);
 
+    // Navegar a las secciones incluso desde páginas de productos
+    useEffect(() => {
+
+        if (!location.hash) return;
+
+        const id = decodeURIComponent(
+            location.hash.substring(1)
+        );
+
+        let attempts = 0;
+        let frameId;
+
+        const scrollToSection = () => {
+
+            const element = document.getElementById(id);
+
+            if (element) {
+                element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+                return;
+            }
+
+            // Esperar a que HomePage termine de renderizar
+            if (attempts < 20) {
+                attempts++;
+                frameId = requestAnimationFrame(scrollToSection);
+            }
+        };
+
+        frameId = requestAnimationFrame(scrollToSection);
+
+        return () => {
+            cancelAnimationFrame(frameId);
+        };
+
+    }, [location.pathname, location.hash]);
+
     return (
         <header
-            className={`header ${scrolled ? "scrolled" : ""}`}
+            className={`header ${(scrolled || solid) ? "scrolled" : ""
+                }`}
         >
 
             <div className="container-custom header-container">
 
-                {/* <div className="header-logo">
-                    AQUA MÉDICA
-                </div> */}
-
-
-                <div className="header-logo">
-
+                <Link
+                    to="/"
+                    className="header-logo"
+                >
                     <img
                         src={logo}
                         alt="AQUA MÉDICA"
@@ -43,34 +87,36 @@ export default function Header() {
                     <span>
                         AQUA Médica
                     </span>
-
-                </div>
+                </Link>
 
                 <nav className="header-nav">
 
-                    <a href="#productos">
+                    <Link to="/#productos">
                         Productos
-                    </a>
+                    </Link>
 
-                    <a href="#empresa">
+                    <Link to="/#about-content">
                         Empresa
-                    </a>
+                    </Link>
 
-                    <a href="#certificaciones">
+                    <Link to="/#certificaciones">
                         Certificaciones
-                    </a>
+                    </Link>
 
-                    <a href="#cobertura">
+                    <Link to="/#cobertura">
                         Cobertura
-                    </a>
+                    </Link>
 
-                    <a href="#contacto">
+                    <Link to="/#contacto">
                         Contacto
-                    </a>
+                    </Link>
 
                 </nav>
 
-                <button className="lang-btn">
+                <button
+                    type="button"
+                    className="lang-btn"
+                >
                     ES
                 </button>
 

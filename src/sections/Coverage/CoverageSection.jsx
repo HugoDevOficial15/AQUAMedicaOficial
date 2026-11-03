@@ -17,7 +17,7 @@ export default function CoverageSection() {
 
 
     return (
-        <section className="coverage">
+        <section className="coverage" id="cobertura">
 
             <div className="coverage-container">
 

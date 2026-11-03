@@ -4,21 +4,21 @@ export default function AboutContent() {
 
     return (
 
-        <div className="about-content">
+        <div className="about-content" id="about-content">
 
             <span className="about-tag">
                 SOBRE AQUA MÉDICA
             </span>
 
             <h2 className="about-title">
-                Más de <span>25 años</span> desarrollando soluciones para la salud.
+                Más de <span>25 años</span> desarrollando concentrados acídos para la salud.
             </h2>
 
             <div className="about-line"></div>
 
-            <p className="about-description">
+            <p className="about-description"  style={{ textAlign: 'justify' }}>
 
-                <strong>AQUA Médica S.A. de C.V.</strong>  es una Empresa dedicada, desde hace más de 27años,
+                <strong>AQUA Médica S.A. de C.V.</strong>  es una Empresa dedicada, desde hace más de 25años,
                 principalmente a la fabricación de Concentrados Ácidos para Hemodiálisis y el Acondicionamiento de polvo
                 de Bicarbonato de Sodio, grado Hemodiálisis. Cuenta con Certificado vigente de Buenas Prácticas de Fabricación, 
                 emitido por la COFEPRIS (Comisión Federal para la Protección contra Riesgos Sanitarios, dependiente de la Secretaría de Salud del Gobierno Mexicano).

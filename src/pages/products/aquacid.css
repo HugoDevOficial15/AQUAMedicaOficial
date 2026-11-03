@@ -1,0 +1,107 @@
+
+.aquacid-page {
+    padding-top: 96px;
+    min-height: 100vh;
+    background: #f5f7fa;
+    color: #172b43;
+}
+
+.aquacid-hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 7%;
+    text-align: center;
+    color: white;
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255, 255, 255, 0.16),
+            transparent 55%
+        ),
+        linear-gradient(125deg, #a90e2d, #ed4054 55%, #a90e2d);
+}
+
+.aquacid-hero-content {
+    max-width: 950px;
+}
+
+.aquacid-eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.aquacid-hero h1 {
+    margin: 25px 0;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 800;
+    letter-spacing: -5px;
+}
+
+.aquacid-hero h1 sup {
+    font-size: 0.25em;
+    vertical-align: top;
+}
+
+.aquacid-line {
+    width: 90px;
+    height: 4px;
+    margin: 0 auto 25px;
+    background: white;
+    border-radius: 10px;
+}
+
+.aquacid-hero h2 {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 600;
+}
+
+.aquacid-hero p {
+    margin-top: 18px;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+.aquacid-intro {
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.aquacid-intro span {
+    color: #bd263e;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.aquacid-intro h2 {
+    margin: 20px 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.aquacid-intro p {
+    max-width: 750px;
+    margin: auto;
+    color: #64748b;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+    .aquacid-page {
+        padding-top: 80px;
+    }
+
+    .aquacid-hero {
+        min-height: 430px;
+        padding: 60px 22px;
+    }
+
+    .aquacid-hero h1 {
+        letter-spacing: -2px;
+    }
+}

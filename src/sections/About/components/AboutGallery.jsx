@@ -14,7 +14,7 @@ import planta6 from "../../../assets/images/about/planta-6.jpeg";
 // import planta7 from "../../../assets/images/about/planta-7.jpeg";
 // import planta8 from "../../../assets/images/about/planta-8.jpeg";
 
-import plantaVideo from "../../../assets/videos/about/aqua.mp4";
+import plantaVideo from "../../../assets/video/about/aqua.mp4";
 
 const images = [
     planta5,

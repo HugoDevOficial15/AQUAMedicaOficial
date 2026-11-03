@@ -7,32 +7,36 @@ export default function HeroContent() {
             </span>
 
             <div className="hero-family">
-                Familia <span>AQUACID®</span>
+                <span>AQUACID®</span>
             </div>
 
             <h1 className="hero-title">
-                Soluciones para
+                Concentrados Acidos para
                 <br />
-                Hemodiálisis con
-                <br />
-                Calidad Certificada
+                Hemodiálisis
             </h1>
 
             <p className="hero-description">
-                Fabricamos concentrados ácidos de alta pureza
+                Fabricamos concentrados ácidos
                 para tratamientos de hemodiálisis con presencia
                 nacional e internacional.
             </p>
 
             <div className="hero-actions">
 
-                <button className="hero-btn-primary">
+                {/* <button href="#productos" className="hero-btn-primary"> */}
+                <a href="#productos" className="hero-btn-primary">
                     Ver Productos
-                </button>
+                </a>
+                {/* </button> */}
 
-                <button className="hero-btn-secondary">
+                {/* <button className="hero-btn-secondary">
                     Certificaciones
-                </button>
+                </button> */}
+
+                <a href="#certificaciones" className="hero-btn-secondary">
+                    Certificaciones
+                </a>
 
             </div>
 

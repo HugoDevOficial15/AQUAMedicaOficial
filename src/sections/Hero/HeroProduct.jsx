@@ -3,7 +3,7 @@ import productImage from "../../assets/images/products/aquacid.png";
 
 export default function HeroProduct() {
     return (
-        <div className="hero-product">
+        <div className="hero-product" id="hero-product">
 
             <div className="hero-product-glow" />
 

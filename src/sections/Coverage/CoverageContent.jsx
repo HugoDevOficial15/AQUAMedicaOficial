@@ -1,6 +1,6 @@
 export default function CoverageContent() {
     return (
-        <div className="coverage-content">
+        <div className="coverage-content" id="cobertura">
 
             <span className="coverage-tag">
                 COBERTURA INTERNACIONAL
@@ -16,7 +16,7 @@ export default function CoverageContent() {
             <div className="coverage-line"></div>
 
             <p className="coverage-description">
-                Desde México exportamos soluciones para hemodiálisis
+                Desde México exportamos concentrados acídos para hemodiálisis
                 con los más altos estándares de calidad hacia
                 Guatemala, Panamá y Venezuela, garantizando confianza,
                 seguridad y excelencia en cada entrega.

@@ -13,12 +13,12 @@ const stats = [
     },
     {
         icon: <FaIndustry />,
-        number: "4",
-        text: "Plantas de producción"
+        number: "1",
+        text: "Planta de producción"
     },
     {
         icon: <FaUsers />,
-        number: "200+",
+        number: "300+",
         text: "Colaboradores"
     },
     {

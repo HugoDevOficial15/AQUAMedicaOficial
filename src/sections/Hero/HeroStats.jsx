@@ -16,13 +16,13 @@ export default function HeroStats() {
         },
         {
             icon: <FaIndustry />,
-            number: "4",
-            title: "Plantas de producción",
+            number: "1",
+            title: "Planta de Producción",
             text: "Tecnología de vanguardia y procesos certificados."
         },
         {
             icon: <FaUsers />,
-            number: "200+",
+            number: "300+",
             title: "Colaboradores",
             text: "Talento comprometido con la calidad."
         },
