@@ -1,43 +1,24 @@
 
 import Footer from "../../sections/Footer/Footer";
-import "./aquacid.css";
+
+import AquacidHero from "../../sections/products/aquacid/AquacidHero";
+import AquacidPackaging from "../../sections/products/aquacid/AquacidPackaging";
+import AquacidFormulations from "../../sections/products/aquacid/AquacidFormulations";
+import AquacidSafetySheets from "../../sections/products/aquacid/components/AquacidSafetySheets";
+
+import "../../sections/products/aquacid/Aquacid.css";
 
 export default function AquacidPage() {
     return (
         <main className="aquacid-page">
 
-            <section className="aquacid-hero">
-                <div className="aquacid-hero-content">
-                    <span className="aquacid-eyebrow">
-                        LÍNEA DE PRODUCTOS · AQUA MÉDICA
-                    </span>
+            <AquacidHero />
 
-                    <h1>
-                        AQUACID<sup>®</sup>
-                    </h1>
+            <AquacidPackaging />
 
-                    <div className="aquacid-line" />
+            <AquacidFormulations />
 
-                    <h2>
-                        Concentrados Ácidos para Hemodiálisis
-                    </h2>
-
-                    <p>
-                        Soluciones especializadas para tratamientos
-                        de hemodiálisis de alto flujo.
-                    </p>
-                </div>
-            </section>
-
-            <section className="aquacid-intro">
-                <span>CONOCE NUESTRA LÍNEA</span>
-                <h2>Innovación y calidad en cada formulación</h2>
-                <p>
-                    AQUACID es la marca comercial de los concentrados
-                    ácidos para hemodiálisis fabricados por
-                    AQUA Médica, S.A. de C.V.
-                </p>
-            </section>
+            <AquacidSafetySheets />
 
             <Footer />
 

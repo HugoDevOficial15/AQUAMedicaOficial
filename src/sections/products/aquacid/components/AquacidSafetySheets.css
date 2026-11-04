@@ -1,0 +1,164 @@
+
+/* =========================================
+   AQUACID - HOJAS DE SEGURIDAD
+========================================= */
+
+.aquacid-safety-section {
+    width: 100%;
+    padding: 0px 5% 85px;
+    background: #f5f7fa;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    border-bottom: 5px solid #087f91;
+
+}
+
+.aquacid-safety-container {
+    max-width: 1450px;
+    margin: auto;
+}
+
+/* ENCABEZADO */
+
+.aquacid-safety-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.aquacid-safety-header > span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #d51f43;
+}
+
+.aquacid-safety-header h2 {
+    color: #087f91;
+    font-size: clamp(25px, 3vw, 38px);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.aquacid-safety-header p {
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* GRID */
+
+.aquacid-safety-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* TARJETAS */
+
+.aquacid-safety-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 12px;
+    background: transparent;
+    transition: .3s ease;
+}
+
+.aquacid-safety-card:hover {
+    background: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(20, 40, 65, .06);
+}
+
+/* ICONO */
+
+.aquacid-safety-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 18px;
+    color: #087f91;
+}
+
+.aquacid-safety-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* BOTÓN */
+
+.aquacid-safety-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    min-height: 52px;
+
+    background: #087f91;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    border-radius: 4px;
+    transition: .3s ease;
+}
+
+.aquacid-safety-button:hover {
+    background: #075e6b;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(8, 127, 145, .2);
+}
+
+/* NOMBRE */
+
+.aquacid-safety-card h3 {
+    margin-top: 25px;
+    color: #ed334e;
+    font-size: clamp(17px, 1.5vw, 23px);
+    font-weight: 800;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .aquacid-safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .aquacid-safety-section {
+        padding: 55px 18px 65px;
+    }
+
+    .aquacid-safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .aquacid-safety-card {
+        padding: 20px 8px;
+    }
+
+    .aquacid-safety-button {
+        width: 105px;
+        min-height: 45px;
+    }
+
+    .aquacid-safety-card h3 {
+        font-size: 15px;
+    }
+
+}

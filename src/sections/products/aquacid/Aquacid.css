@@ -1,0 +1,16 @@
+
+.aquacid-page {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #f4f7fa;
+}
+
+.aquacid-page section {
+    position: relative;
+    width: 100%;
+}
+
+.aquacid-page img {
+    max-width: 100%;
+}

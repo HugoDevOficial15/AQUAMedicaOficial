@@ -1,0 +1,113 @@
+
+.aquacid-packaging {
+    width: 100%;
+    padding: 100px 24px 85px;
+    background: #f4f7fa;
+}
+
+.aquacid-packaging-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.aquacid-packaging-header {
+    max-width: 1100px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.aquacid-section-tag {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #e52443;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.aquacid-packaging-header h2 {
+    margin-bottom: 24px;
+    color: #142943;
+    font-size: clamp(30px, 4vw, 50px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.aquacid-packaging-header h2 span {
+    color: #e52443;
+}
+
+.aquacid-packaging-header p {
+    margin: 0 auto 22px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.aquacid-packaging-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.aquacid-packaging-card {
+    min-height: 180px;
+    padding: 36px 20px 30px;
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;
+    border-bottom: 4px solid #e52443;
+    box-shadow: 0 12px 35px rgba(20, 41, 67, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aquacid-packaging-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(20, 41, 67, 0.11);
+}
+
+.aquacid-packaging-card span {
+    display: block;
+    margin-bottom: 24px;
+    color: #078b9b;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.aquacid-packaging-card h3 {
+    margin-bottom: 10px;
+    color: #142943;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.aquacid-packaging-card p {
+    color: #718096;
+    font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+    .aquacid-packaging-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .aquacid-packaging {
+        padding: 70px 18px;
+    }
+
+    .aquacid-packaging-header {
+        margin-bottom: 45px;
+    }
+
+    .aquacid-packaging-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .aquacid-packaging-card {
+        min-height: 160px;
+    }
+}

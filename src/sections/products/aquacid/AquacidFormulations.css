@@ -1,0 +1,126 @@
+
+.aquacid-formulations {
+    width: 100%;
+    padding: 70px 24px 100px;
+    background: #f4f7fa;
+}
+
+.aquacid-formulations-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.aquacid-formulations-header {
+    max-width: 950px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.aquacid-formulations-tag {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #078b9b;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.aquacid-formulations-header h2 {
+    margin-bottom: 20px;
+    color: #142943;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 800;
+}
+
+.aquacid-formulations-header h2 span {
+    color: #e52443;
+}
+
+.aquacid-formulations-header p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.aquacid-formulations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 65px;
+    align-items: start;
+}
+
+.aquacid-formulation-card {
+    min-width: 0;
+    text-align: center;
+}
+
+.aquacid-formulation-image {
+    width: 100%;
+    max-width: 520px;
+    height: 570px;
+    margin: 0 auto 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aquacid-formulation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.aquacid-formulation-description {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.aquacid-formulation-description p {
+    color: #858585;
+    font-size: 19px;
+    line-height: 1.65;
+    text-align: center;
+}
+
+.aquacid-red {
+    color: #ed2939;
+    font-weight: 800;
+}
+
+.aquacid-blue {
+    color: #4966a5;
+    font-weight: 800;
+}
+
+@media (max-width: 900px) {
+    .aquacid-formulations-grid {
+        gap: 35px;
+    }
+
+    .aquacid-formulation-image {
+        height: 430px;
+    }
+
+    .aquacid-formulation-description p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 650px) {
+    .aquacid-formulations {
+        padding: 60px 18px 75px;
+    }
+
+    .aquacid-formulations-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .aquacid-formulation-image {
+        height: 420px;
+        margin-bottom: 25px;
+    }
+}

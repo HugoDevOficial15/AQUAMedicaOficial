@@ -68,8 +68,7 @@ export default function Header({ solid = false }) {
 
     return (
         <header
-            className={`header ${(scrolled || solid) ? "scrolled" : ""
-                }`}
+            id="site-header" className={`header ${(scrolled || solid) ? "scrolled" : ""}`}
         >
 
             <div className="container-custom header-container">
